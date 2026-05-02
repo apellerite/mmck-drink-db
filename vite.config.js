@@ -4,6 +4,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import vueDevTools from 'vite-plugin-vue-devtools'
+import mkcert from 'vite-plugin-mkcert'
 import tailwindcss from '@tailwindcss/vite'
 import ui from '@nuxt/ui/vite'
 
@@ -13,6 +14,7 @@ export default defineConfig({
     vue(),
     vueJsx(),
     vueDevTools(),
+    mkcert(),
     tailwindcss(),
     ui(),
   ],
@@ -20,25 +22,6 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
       '@components': fileURLToPath(new URL('./src/components', import.meta.url)),
-    },
-  },
-  server: {
-    proxy: {
-      '/api/image': {
-        target: 'https://www.artic.edu',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api\/image/, '/iiif/2'),
-        // headers: {
-        //   'Referer': 'https://www.artic.edu/',
-        //   'Referrer-Policy': 'no-referrer',
-        // },
-        // configure: (proxy, options) => {
-        //   proxy.on('proxyReq', (proxyReq, req, res) => {
-        //     proxyReq.setHeader('Referrer-Policy', 'no-referrer');
-        //     proxyReq.setHeader('Referer', 'https://www.artic.edu/');
-        //   });
-        // },
-      },
     },
   },
 })

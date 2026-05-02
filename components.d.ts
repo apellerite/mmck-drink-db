@@ -23,6 +23,7 @@ declare module 'vue' {
     SideBar: typeof import('./src/components/navigation/SideBar.vue')['default']
     TopBar: typeof import('./src/components/navigation/TopBar.vue')['default']
     UApp: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/App.vue')['default']
+    UButton: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Button.vue')['default']
     UCarousel: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Carousel.vue')['default']
     UContainer: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Container.vue')['default']
     UFooter: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Footer.vue')['default']
@@ -30,6 +31,7 @@ declare module 'vue' {
     UMain: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Main.vue')['default']
     UNavigationMenu: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/NavigationMenu.vue')['default']
     UPageHero: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/PageHero.vue')['default']
+    UPageSection: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/PageSection.vue')['default']
   }
 }
 
@@ -46,6 +48,7 @@ declare global {
   const SideBar: typeof import('./src/components/navigation/SideBar.vue')['default']
   const TopBar: typeof import('./src/components/navigation/TopBar.vue')['default']
   const UApp: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/App.vue')['default']
+  const UButton: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Button.vue')['default']
   const UCarousel: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Carousel.vue')['default']
   const UContainer: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Container.vue')['default']
   const UFooter: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Footer.vue')['default']
@@ -53,4 +56,5 @@ declare global {
   const UMain: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Main.vue')['default']
   const UNavigationMenu: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/NavigationMenu.vue')['default']
   const UPageHero: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/PageHero.vue')['default']
+  const UPageSection: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/PageSection.vue')['default']
 }
