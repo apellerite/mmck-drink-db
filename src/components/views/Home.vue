@@ -1,35 +1,41 @@
 <template>
     <UPageHero
         title="Welcome to the MMCK Drink Database"
-        description="Discover a world of delicious drink recipes and ingredients. Browse through cocktails, mocktails, and more!">
-        <h2 class="text-center text-5xl">Featured Artwork</h2>
+        description="Discover a world of delicious drink recipes and ingredients. Browse through cocktails, mocktails, and more!"
+        :links="buttonLinks" />
+    <UPageSection title="Featured Artwork">
         <UCarousel
+            class="mx-auto w-sm sm:w-xl"
             :items="featuredArtSrc"
-            :autoplay="{ delay: 6000 }"
+            :autoplay="{ delay: 10000 }"
+            dots
+            fade
             loop>
             <template #default="{ item, index }">
-                <figure class="flex flex-col gap-4 text-center">
-                    <img :src="item" class="max-h-[600px] max-w-full m-auto" />
-                    <figcaption class="flex flex-col gap-2">
-                        <span class="text-3xl italic">
-                            {{ featuredArtDetails[index].title }}
-                        </span>
-                        <span class="text-xl">
-                            {{ featuredArtDetails[index].artistInfo }}
-                        </span>
-                    </figcaption>
+                <div class="flex flex-col">
+                    <figure class="flex flex-col gap-4 text-center">
+                        <img :src="item" class="max-h-[600px] m-auto" />
+                        <figcaption class="flex flex-col gap-2">
+                            <span class="text-3xl italic">
+                                {{ featuredArtDetails[index].title }}
+                            </span>
+                            <span class="text-xl">
+                                {{ featuredArtDetails[index].artistInfo }}
+                            </span>
+                        </figcaption>
+                    </figure>
                     <UButton
                         v-if="featuredArtDetails[index].url"
-                        class="mt-[24px] w-sm text-base self-center justify-center"
+                        class="mt-[24px] mx-auto"
                         :to="featuredArtDetails[index].url"
                         target="_blank"
-                        trailing-icon="i-lucide-external-link">
-                        Read more at the MET Museum
-                    </UButton>
-                </figure>
+                        label=" Read more about this piece"
+                        color="neutral"
+                        trailing-icon="i-lucide-external-link" />
+                </div>
             </template>
         </UCarousel>
-    </UPageHero>
+    </UPageSection>
 </template>
 
 <script setup>
@@ -37,6 +43,19 @@ import { onMounted, ref } from 'vue';
 
 const featuredArtSrc = ref([]);
 const featuredArtDetails = ref([]);
+
+const buttonLinks = [
+    { 
+        label: 'Browse Cocktails',
+        to: '/recipes',
+        icon: 'i-lucide-wine'
+    },
+    { 
+        label: 'Browse Ingredients', 
+        to: '/ingredients',
+        icon: 'i-lucide-sprout'
+    }
+];
 
 onMounted(async () => {
     try {

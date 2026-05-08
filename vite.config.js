@@ -16,7 +16,14 @@ export default defineConfig({
     vueDevTools(),
     mkcert(),
     tailwindcss(),
-    ui(),
+    ui({
+      ui: {
+        colors: {
+          primary: 'amber',
+          neutral: 'taupe',
+        }
+      }
+    })
   ],
   resolve: {
     alias: {

@@ -30,8 +30,12 @@ declare module 'vue' {
     UHeader: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Header.vue')['default']
     UMain: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Main.vue')['default']
     UNavigationMenu: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/NavigationMenu.vue')['default']
+    UPage: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Page.vue')['default']
+    UPageBody: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/PageBody.vue')['default']
+    UPageHeader: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/PageHeader.vue')['default']
     UPageHero: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/PageHero.vue')['default']
     UPageSection: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/PageSection.vue')['default']
+    UUser: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/User.vue')['default']
   }
 }
 
@@ -55,6 +59,10 @@ declare global {
   const UHeader: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Header.vue')['default']
   const UMain: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Main.vue')['default']
   const UNavigationMenu: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/NavigationMenu.vue')['default']
+  const UPage: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Page.vue')['default']
+  const UPageBody: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/PageBody.vue')['default']
+  const UPageHeader: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/PageHeader.vue')['default']
   const UPageHero: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/PageHero.vue')['default']
   const UPageSection: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/PageSection.vue')['default']
+  const UUser: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/User.vue')['default']
 }
