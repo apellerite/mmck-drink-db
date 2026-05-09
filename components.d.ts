@@ -12,15 +12,14 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    About: typeof import('./src/components/views/About.vue')['default']
-    Home: typeof import('./src/components/views/Home.vue')['default']
+    About: typeof import('./src/components/views/AboutPage.vue')['default']
+    Home: typeof import('./src/components/views/HomePage.vue')['default']
     IngredientDetails: typeof import('./src/components/views/IngredientDetails.vue')['default']
-    Ingredients: typeof import('./src/components/views/Ingredients.vue')['default']
+    Ingredients: typeof import('./src/components/views/IngredientsPage.vue')['default']
     RecipeDetails: typeof import('./src/components/views/RecipeDetails.vue')['default']
-    Recipes: typeof import('./src/components/views/Recipes.vue')['default']
+    Recipes: typeof import('./src/components/views/RecipesPage.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    SideBar: typeof import('./src/components/navigation/SideBar.vue')['default']
     TopBar: typeof import('./src/components/navigation/TopBar.vue')['default']
     UApp: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/App.vue')['default']
     UButton: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Button.vue')['default']
@@ -44,15 +43,14 @@ declare module 'vue' {
 
 // For TSX support
 declare global {
-  const About: typeof import('./src/components/views/About.vue')['default']
-  const Home: typeof import('./src/components/views/Home.vue')['default']
+  const About: typeof import('./src/components/views/AboutPage.vue')['default']
+  const Home: typeof import('./src/components/views/HomePage.vue')['default']
   const IngredientDetails: typeof import('./src/components/views/IngredientDetails.vue')['default']
-  const Ingredients: typeof import('./src/components/views/Ingredients.vue')['default']
+  const Ingredients: typeof import('./src/components/views/IngredientsPage.vue')['default']
   const RecipeDetails: typeof import('./src/components/views/RecipeDetails.vue')['default']
-  const Recipes: typeof import('./src/components/views/Recipes.vue')['default']
+  const Recipes: typeof import('./src/components/views/RecipesPage.vue')['default']
   const RouterLink: typeof import('vue-router')['RouterLink']
   const RouterView: typeof import('vue-router')['RouterView']
-  const SideBar: typeof import('./src/components/navigation/SideBar.vue')['default']
   const TopBar: typeof import('./src/components/navigation/TopBar.vue')['default']
   const UApp: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/App.vue')['default']
   const UButton: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Button.vue')['default']

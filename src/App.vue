@@ -1,5 +1,4 @@
 <script setup>
-import SideBar from '@components/navigation/SideBar.vue';
 import TopBar from '@components/navigation/TopBar.vue';
 import { Smile } from '@lucide/vue';
 </script>
