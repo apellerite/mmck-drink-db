@@ -6,31 +6,32 @@ const router = createRouter({
     {
       path: '/',
       name: 'Home',
-      component: () => import('@components/views/HomePage.vue')
+      component: () => import('@components/views/HomePage.vue'),
     },
     {
       path: '/about',
       name: 'About',
-      component: () => import('@components/views/AboutPage.vue')
+      component: () => import('@components/views/AboutPage.vue'),
     },
     {
       path: '/ingredients',
       name: 'Ingredients',
-      component: () => import('@components/views/IngredientsPage.vue')
+      component: () => import('@components/views/IngredientsPage.vue'),
+      props: (route) => ({ query: route.query.q }),
     },
     {
       path: '/ingredients/:id',
-      component: () => import('@components/views/IngredientDetails.vue')
+      component: () => import('@components/views/IngredientDetails.vue'),
     },
     {
       path: '/recipes',
       name: 'Recipes',
-      component: () => import('@components/views/RecipesPage.vue')
+      component: () => import('@components/views/RecipesPage.vue'),
     },
     {
       path: '/recipes/:id',
-      component: () => import('@components/views/RecipeDetails.vue')
-    }
+      component: () => import('@components/views/RecipeDetails.vue'),
+    },
   ],
 })
 

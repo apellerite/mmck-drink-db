@@ -1,34 +1,42 @@
 <template>
-    <UHeader to="/">
-        <template #title>
-            <Martini />
-            MMCK Drink DB
-        </template>
-        <UNavigationMenu :items="navItems" />
-    </UHeader>
+  <UHeader to="/">
+    <template #title>
+      <Martini />
+      MMCK Drink DB
+    </template>
+    <UNavigationMenu :items="navItems" content-orientation="horizontal" />
+  </UHeader>
 </template>
 
 <script setup>
-import { computed } from 'vue';
-import { Martini } from '@lucide/vue';
+import { computed, onMounted } from 'vue'
+import { storeToRefs } from 'pinia'
+import { Martini } from '@lucide/vue'
+import { useIngredientsStore } from '@/stores/ingredients'
+
+const ingredientsStore = useIngredientsStore()
+const { ingredientCategories } = storeToRefs(ingredientsStore)
 
 const navItems = computed(() => [
-    { 
-        label: 'Ingredients',
-        to: '/ingredients',
-        children: [
-            { label: 'Spirits', to: '/ingredients/spirits' },
-            { label: 'Mixers', to: '/ingredients/mixers' },
-            { label: 'Garnishes', to: '/ingredients/garnishes' },
-        ]
-    },
-    { 
-        label: 'Recipes', 
-        to: '/recipes' 
-    },
-    { 
-        label: 'About', 
-        to: '/about' 
-    },
-]);
+  {
+    label: 'Ingredients',
+    to: '/ingredients',
+    children: ingredientCategories.value.map((category) => ({
+      label: category,
+      to: `/ingredients?q=${encodeURIComponent(category)}`,
+    })),
+  },
+  {
+    label: 'Recipes',
+    to: '/recipes',
+  },
+  {
+    label: 'About',
+    to: '/about',
+  },
+])
+
+onMounted(() => {
+  ingredientsStore.fetchIngredientCategories()
+})
 </script>

@@ -13,11 +13,15 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     About: typeof import('./src/components/views/AboutPage.vue')['default']
+    AboutPage: typeof import('./src/components/views/AboutPage.vue')['default']
     Home: typeof import('./src/components/views/HomePage.vue')['default']
+    HomePage: typeof import('./src/components/views/HomePage.vue')['default']
     IngredientDetails: typeof import('./src/components/views/IngredientDetails.vue')['default']
     Ingredients: typeof import('./src/components/views/IngredientsPage.vue')['default']
+    IngredientsPage: typeof import('./src/components/views/IngredientsPage.vue')['default']
     RecipeDetails: typeof import('./src/components/views/RecipeDetails.vue')['default']
     Recipes: typeof import('./src/components/views/RecipesPage.vue')['default']
+    RecipesPage: typeof import('./src/components/views/RecipesPage.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TopBar: typeof import('./src/components/navigation/TopBar.vue')['default']
@@ -44,11 +48,15 @@ declare module 'vue' {
 // For TSX support
 declare global {
   const About: typeof import('./src/components/views/AboutPage.vue')['default']
+  const AboutPage: typeof import('./src/components/views/AboutPage.vue')['default']
   const Home: typeof import('./src/components/views/HomePage.vue')['default']
+  const HomePage: typeof import('./src/components/views/HomePage.vue')['default']
   const IngredientDetails: typeof import('./src/components/views/IngredientDetails.vue')['default']
   const Ingredients: typeof import('./src/components/views/IngredientsPage.vue')['default']
+  const IngredientsPage: typeof import('./src/components/views/IngredientsPage.vue')['default']
   const RecipeDetails: typeof import('./src/components/views/RecipeDetails.vue')['default']
   const Recipes: typeof import('./src/components/views/RecipesPage.vue')['default']
+  const RecipesPage: typeof import('./src/components/views/RecipesPage.vue')['default']
   const RouterLink: typeof import('vue-router')['RouterLink']
   const RouterView: typeof import('vue-router')['RouterView']
   const TopBar: typeof import('./src/components/navigation/TopBar.vue')['default']
