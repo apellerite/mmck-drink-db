@@ -29,7 +29,7 @@ export const useIngredientsStore = defineStore('ingredients', () => {
     ingredientsData.value = ingredientsData.value.concat(newIngredients)
   }
 
-  async function fetchIngredients(order = 'name', range = [0, 59]) {
+  async function fetchIngredients({ order, range } = { order: 'ingredient_name', range: [0, 49] }) {
     if (countFetched.value && ingredientsData.value.length >= count.value) return
 
     const { data } = await supabase

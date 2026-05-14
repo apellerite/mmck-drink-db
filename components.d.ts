@@ -26,6 +26,7 @@ declare module 'vue' {
     RouterView: typeof import('vue-router')['RouterView']
     TopBar: typeof import('./src/components/navigation/TopBar.vue')['default']
     UApp: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/App.vue')['default']
+    UBadge: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Badge.vue')['default']
     UButton: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Button.vue')['default']
     UCarousel: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Carousel.vue')['default']
     UContainer: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Container.vue')['default']
@@ -41,6 +42,7 @@ declare module 'vue' {
     UPageHeader: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/PageHeader.vue')['default']
     UPageHero: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/PageHero.vue')['default']
     UPageSection: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/PageSection.vue')['default']
+    UProgress: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Progress.vue')['default']
     UUser: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/User.vue')['default']
   }
 }
@@ -61,6 +63,7 @@ declare global {
   const RouterView: typeof import('vue-router')['RouterView']
   const TopBar: typeof import('./src/components/navigation/TopBar.vue')['default']
   const UApp: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/App.vue')['default']
+  const UBadge: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Badge.vue')['default']
   const UButton: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Button.vue')['default']
   const UCarousel: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Carousel.vue')['default']
   const UContainer: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Container.vue')['default']
@@ -76,5 +79,6 @@ declare global {
   const UPageHeader: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/PageHeader.vue')['default']
   const UPageHero: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/PageHero.vue')['default']
   const UPageSection: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/PageSection.vue')['default']
+  const UProgress: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Progress.vue')['default']
   const UUser: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/User.vue')['default']
 }

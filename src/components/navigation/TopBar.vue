@@ -4,7 +4,12 @@
       <Martini />
       MMCK Drink DB
     </template>
-    <UNavigationMenu :items="navItems" content-orientation="horizontal" />
+    <UNavigationMenu
+      :items="navItems"
+      :ui="{
+        list: 'min-w-[600px] justify-center',
+      }"
+    />
   </UHeader>
 </template>
 
