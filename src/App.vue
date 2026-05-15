@@ -1,8 +1,3 @@
-<script setup>
-import TopBar from '@components/navigation/TopBar.vue';
-import { Smile } from '@lucide/vue';
-</script>
-
 <template>
   <UApp>
     <TopBar />
@@ -20,4 +15,7 @@ import { Smile } from '@lucide/vue';
   </UApp>
 </template>
 
-<style scoped></style>
+<script setup>
+import TopBar from '@components/navigation/TopBar.vue'
+import { Smile } from '@lucide/vue'
+</script>
