@@ -1,0 +1,1 @@
+import{r as e}from"./index-DghQYhOM.js";var t={};function n(e,t){return`placeholder`}var r=e(t,[[`render`,n]]);export{r as default};
