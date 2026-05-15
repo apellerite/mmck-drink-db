@@ -25,6 +25,7 @@ export default defineConfig({
       }
     })
   ],
+  base: '/mmck-drink-db/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
