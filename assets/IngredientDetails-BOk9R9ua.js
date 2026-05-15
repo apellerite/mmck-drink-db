@@ -1,0 +1,1 @@
+import{r as e}from"./index-BXskBZfm.js";var t={};function n(e,t){return`placeholder`}var r=e(t,[[`render`,n]]);export{r as default};
