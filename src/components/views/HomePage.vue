@@ -4,7 +4,7 @@
     description="Discover a world of delicious drink recipes and ingredients. Browse through cocktails, mocktails, and more!"
     :links="buttonLinks"
   />
-  <UPageSection title="Featured Artwork">
+  <UPageSection title="Featured Artwork" description="Made possible by The Met Museum">
     <UCarousel
       class="mx-auto w-sm sm:w-xl"
       :items="featuredArtSrc"
@@ -34,6 +34,7 @@
             target="_blank"
             label=" Read more about this piece"
             color="neutral"
+            variant="soft"
             trailing-icon="i-lucide-external-link"
           />
         </div>

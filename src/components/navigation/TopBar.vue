@@ -16,7 +16,7 @@
         <UDropdownMenu arrow :items="userDropdownItems">
           <UButton icon="i-lucide-chevron-down" variant="ghost" />
           <template #git-leading>
-            <UIcon :name="GithubIcon" class="size-5" />
+            <SimpleIconWrapper icon="github" class="size-5" aria-hidden="true" />
           </template>
         </UDropdownMenu>
       </UFieldGroup>
@@ -29,7 +29,6 @@
 import { computed, onMounted } from 'vue'
 import { storeToRefs } from 'pinia'
 import { Martini } from '@lucide/vue'
-import GithubIcon from '../icons/GithubIcon.vue'
 
 import { useUserStore } from '@/stores/user'
 import { useIngredientsStore } from '@/stores/ingredients'

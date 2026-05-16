@@ -2,6 +2,7 @@
   <UApp>
     <TopBar />
     <UMain>
+      <UBanner id="construction-banner" class="z-0" title="This site is under construction and is subject to change." icon="i-lucide-info" close />
       <UContainer>
         <RouterView />
       </UContainer>

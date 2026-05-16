@@ -4,3 +4,20 @@
 @theme {
   --font-sans: 'Geist', sans-serif;
 }
+
+:root {
+  &:not(.dark) {
+    --ui-bg: #FCF8F3;
+    --ui-bg-accented: #f4e2cd;
+    --ui-bg-elevated: #f7ecdf;
+    --ui-primary: #582B2C;
+  }
+}
+
+.dev-icon {
+  @apply size-12 md:size-18 lg:size-24;
+}
+
+.simple-icon:where(.dark *) {
+  @apply invert;
+}
