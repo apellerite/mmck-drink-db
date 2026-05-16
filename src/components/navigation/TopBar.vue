@@ -52,12 +52,16 @@ import { Martini } from '@lucide/vue'
 
 import { useUserStore } from '@/stores/user'
 import { useIngredientsStore } from '@/stores/ingredients'
+import { useRecipesStore } from '@/stores/recipes'
 
 const userStore = useUserStore()
 const { currentUser } = storeToRefs(userStore)
 
 const ingredientsStore = useIngredientsStore()
 const { ingredientCategories } = storeToRefs(ingredientsStore)
+
+const recipesStore = useRecipesStore()
+const { recipeTypes } = storeToRefs(recipesStore)
 
 // Reusable nav objects
 const aboutNav = {
@@ -125,7 +129,13 @@ const navItems = computed(() => [
       to: `/ingredients?q=${encodeURIComponent(category)}`,
     })),
   },
-  recipeNav.value,
+  {
+    ...recipeNav.value,
+    children: recipeTypes.value.map((root) => ({
+      label: root,
+      to: `/recipes?q=${encodeURIComponent(root)}`,
+    })),
+  },
   aboutNav
 ])
 
@@ -149,5 +159,6 @@ const userDropdownItems = computed(() => [
 onMounted(() => {
   userStore.getCurrentUser()
   ingredientsStore.fetchIngredientCategories()
+  recipesStore.fetchRecipeTypes()
 })
 </script>

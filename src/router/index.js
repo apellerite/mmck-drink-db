@@ -38,6 +38,7 @@ const router = createRouter({
       path: '/recipes',
       name: 'Recipes',
       component: () => import('@components/views/RecipesPage.vue'),
+      props: (route) => ({ query: route.query.q }),
       beforeEnter: [checkAuthenticated],
     },
     {
