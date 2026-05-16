@@ -6,7 +6,7 @@
   />
   <UPageSection title="Featured Artwork" description="Made possible by The Met Museum">
     <UCarousel
-      class="mx-auto w-sm sm:w-xl"
+      class="mx-auto w-3xs sm:w-md md:w-xl"
       :items="featuredArtSrc"
       :autoplay="{ delay: 10000 }"
       dots
@@ -17,19 +17,19 @@
         <UProgress v-if="loadingArt" />
         <div v-else class="flex flex-col">
           <figure class="flex flex-col gap-4 text-center">
-            <img :src="item" class="max-h-[600px] m-auto" />
+            <img :src="item" class="max-h-150 m-auto" />
             <figcaption class="flex flex-col gap-2">
-              <span class="text-3xl italic">
+              <span class="text-xl md:text-3xl italic">
                 {{ featuredArtDetails[index].title }}
               </span>
-              <span class="text-xl">
+              <span class="text-md md:text-xl">
                 {{ featuredArtDetails[index].artistInfo }}
               </span>
             </figcaption>
           </figure>
           <UButton
             v-if="featuredArtDetails[index].url"
-            class="mt-[24px] mx-auto"
+            class="mt-6 mx-auto"
             :to="featuredArtDetails[index].url"
             target="_blank"
             label=" Read more about this piece"
@@ -52,14 +52,14 @@ const loadingArt = ref(true)
 
 const buttonLinks = [
   {
-    label: 'Browse Cocktails',
-    to: '/recipes',
-    icon: 'i-lucide-wine',
-  },
-  {
     label: 'Browse Ingredients',
     to: '/ingredients',
     icon: 'i-lucide-sprout',
+  },
+  {
+    label: 'Browse Cocktail Recipes',
+    to: '/recipes',
+    icon: 'i-lucide-wine',
   },
 ]
 

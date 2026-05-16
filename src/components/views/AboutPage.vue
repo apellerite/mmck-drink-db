@@ -51,19 +51,19 @@
                 </UUser>
             </UPageSection>
             <UPageLogos title="Site created with the following tools:" :marquee="{ pauseOnHover: true }">
-                <SimpleIconWrapper icon="vuedotjs" title="JavaScript Framework: Vue.js" class="dev-icon" />
-                <SimpleIconWrapper icon="tailwindcss" title="CSS Framework: Tailwind CSS" class="dev-icon" />
-                <SimpleIconWrapper icon="nuxt" title="Component Library: NuxtUI" class="dev-icon" />
-                <SimpleIconWrapper icon="pinia" title="State Management: Pinia" class="dev-icon" />
-                <SimpleIconWrapper icon="vite" title="Bundler: Vite" class="dev-icon" />
-                <SimpleIconWrapper icon="lucide" title="Icons: Lucide" class="dev-icon" />
-                <SimpleIconWrapper icon="simpleicons" title="Brand Icons: Simple Icons" class="dev-icon" />
-                <SimpleIconWrapper icon="supabase" title="Development Platform: Supabase" class="dev-icon" />
-                <SimpleIconWrapper icon="googlesheets" title="Data Formatter: Google Sheets" class="dev-icon" />
-                <SimpleIconWrapper icon="github" title="Version Control: Github" class="dev-icon" />
-                <SimpleIconWrapper icon="githubactions" title="Deployment: Github Actions" class="dev-icon" />
-                <SimpleIconWrapper icon="npm" title="Package Management: npm" class="dev-icon" />
-                <SimpleIconWrapper icon="claude" title="AI Agent Assistant: Claude" class="dev-icon" />
+                <SimpleIcon icon="vuedotjs" title="JavaScript Framework: Vue.js" class="dev-icon" />
+                <SimpleIcon icon="tailwindcss" title="CSS Framework: Tailwind CSS" class="dev-icon" />
+                <SimpleIcon icon="nuxt" title="Component Library: NuxtUI" class="dev-icon" />
+                <SimpleIcon icon="pinia" title="State Management: Pinia" class="dev-icon" />
+                <SimpleIcon icon="vite" title="Bundler: Vite" class="dev-icon" />
+                <SimpleIcon icon="lucide" title="Icons: Lucide" class="dev-icon" />
+                <SimpleIcon icon="simpleicons" title="Brand Icons: Simple Icons" class="dev-icon" />
+                <SimpleIcon icon="supabase" title="Development Platform: Supabase" class="dev-icon" />
+                <SimpleIcon icon="googlesheets" title="Data Formatter: Google Sheets" class="dev-icon" />
+                <SimpleIcon icon="github" title="Version Control: Github" class="dev-icon" />
+                <SimpleIcon icon="githubactions" title="Deployment: Github Actions" class="dev-icon" />
+                <SimpleIcon icon="npm" title="Package Management: npm" class="dev-icon" />
+                <SimpleIcon icon="claude" title="AI Agent Assistant: Claude" class="dev-icon" />
             </UPageLogos>
         </UPageBody>
     </UPage>
