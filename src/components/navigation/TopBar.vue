@@ -37,10 +37,8 @@
         <template #git-leading>
           <SimpleIcon icon="github" class="size-5" aria-hidden="true" />
         </template>
-        <template #log>
-          <LoginModal v-if="!currentUser" />
-        </template>
       </UNavigationMenu>
+      <LoginModal v-if="!currentUser" class="mt-3" />
     </template>
   </UHeader>
 </template>
@@ -88,19 +86,13 @@ const gitNav = {
   slot: 'git',
 }
 
-const logControl = computed(() => {
-  const itemAttrs = {
+const logoutBtn = computed(() => {
+  return {
     label: 'Logout',
     icon: 'i-lucide-log-out',
     class: 'cursor-pointer',
-    slot: 'log'
+    onSelect: () => userStore.logoutUser()
   }
-
-  if (currentUser.value) {
-    itemAttrs.onSelect = () => userStore.logoutUser()
-  }
-
-  return itemAttrs
 })
 
 const recipeNav = computed(() => {
@@ -139,11 +131,18 @@ const navItems = computed(() => [
   aboutNav
 ])
 
-const popupNavItems = computed(() => [
-  [ profileNav ],
-  [ ingredientNav, recipeNav.value, aboutNav ],
-  [ gitNav, logControl.value ]
-])
+const popupNavItems = computed(() => {
+  const items = [[ ingredientNav, recipeNav.value, aboutNav ]]
+  const userItems = [ gitNav ]
+
+  if (currentUser.value) {
+    items.unshift([profileNav])
+    userItems.push(logoutBtn.value)
+  }
+  items.push(userItems)
+
+  return items
+})
 
 const userDropdownItems = computed(() => [
   [
@@ -153,7 +152,7 @@ const userDropdownItems = computed(() => [
     },
   ],
   [ profileNav, gitNav ],
-  [ logControl.value ],
+  [ logoutBtn.value ],
 ])
 
 onMounted(() => {
